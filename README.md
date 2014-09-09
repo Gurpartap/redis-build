@@ -4,15 +4,15 @@ Results in a 18.56MB image, 5.6MB of which is busybox. This is the smallest redi
 
 The ubuntu flavour offers the necessary dependencies (libc) and the portability of binaries for redis to run. The packaged redis binaries are from [dockerfiles/redis:latest](https://registry.hub.docker.com/u/dockerfiles/redis/), which is based on ubuntu.
 
-Also serves as an example for docker within docker usage and shipping binaries with a minimal base image (busybox) after compiling in an intermediary image (which, in this case, bases itself on a base image with redis precompiled).
-
-The busybox based redis repo is available at https://registry.hub.docker.com/u/gurpartap/redis.
-
 ##### Usage
 
 `docker pull gurpartap/redis`
 
+The repo is available at https://registry.hub.docker.com/u/gurpartap/redis/.
+
 ##### Building and releasing
+
+Apart from building redis, redis-build also serves as an example for docker within docker usage and shipping binaries with a minimal base image after compiling in an intermediary image (which, in this case, bases itself on a base image which has redis precompiled).
 
 ```bash
 $ cat ./script/build.sh
@@ -35,7 +35,7 @@ docker rmi -f gurpartap/redis
 ```
 
 ```bash
-$ ./release.sh # will run them all.
+$ ./script/release.sh # will run them all.
 ```
 
 If you have any feedback, please [contact me](http://gurpartap.com/).
