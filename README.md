@@ -1,6 +1,8 @@
 ### Package redis with [busybox:ubuntu-14.04](https://registry.hub.docker.com/_/busybox) using Docker
 
-Results in a 18.56MB image, 5.6MB of which is busybox.
+Results in a 18.56MB image, 5.6MB of which is busybox. This is the smallest redis image available and it is extremely useful for serving in docker based examples. 5.6MB of this is used by the busybox:ubuntu-14.04 base image.
+
+The ubuntu flavour offers the necessary dependencies (libc) and the portability of binaries for redis to run. The packaged redis binaries are from [dockerfiles/redis:latest](https://registry.hub.docker.com/u/dockerfiles/redis/), which is based on ubuntu.
 
 Also serves as an example for docker within docker usage and shipping binaries with a minimal base image (busybox) after compiling in an intermediary image (which, in this case, bases itself on a base image with redis precompiled).
 
