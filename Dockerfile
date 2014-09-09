@@ -1,4 +1,4 @@
-FROM dockerfile/redis
+FROM dockerfile/redis:latest
 
 RUN mkdir -p /opt/redis/ && \
     cp /usr/local/bin/redis-* /opt/redis/ && \

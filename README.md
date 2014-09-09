@@ -1,6 +1,6 @@
-### Package redis with busybox using Docker
+### Package redis with [busybox:ubuntu-14.04](https://registry.hub.docker.com/_/busybox) using Docker
 
-Packages the built binary with [busybox](https://registry.hub.docker.com/_/busybox) base image.
+Results in a 18.56MB image, 5.6MB of which is busybox.
 
 Also serves as an example for docker within docker usage and shipping binaries with a minimal base image (busybox) after compiling in an intermediary image (which, in this case, bases itself on a base image with redis precompiled).
 
