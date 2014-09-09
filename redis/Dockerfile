@@ -1,4 +1,4 @@
-FROM busybox
+FROM busybox:ubuntu-14.04
 
 ADD ./redis.conf       /etc/redis/redis.conf
 ADD ./redis-cli        /usr/local/bin/redis-cli
@@ -12,4 +12,4 @@ VOLUME ["/data"]
 WORKDIR /data
 EXPOSE 6379
 
-CMD ["/redis-server", "/etc/redis/redis.conf"]
+CMD ["/usr/local/bin/redis-server", "/etc/redis/redis.conf"]
