@@ -1,5 +1,6 @@
 FROM busybox
 
+ADD ./redis.conf       /etc/redis/redis.conf
 ADD ./redis-cli        /usr/local/bin/redis-cli
 ADD ./redis-server     /usr/local/bin/redis-server
 ADD ./redis-sentinel   /usr/local/bin/redis-sentinel
